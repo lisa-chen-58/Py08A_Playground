@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+
+        <!-- DONT FORGET TO CHANGE TITLE -->
+        <title>Playground</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../static/style.css">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        body{
+            width:100%;
+        }
+        .box {
+            height: 100px;
+            width: 100px;
+            margin: 1% 1%;
+        }
+        .div-default{
+            background-color: #a6c4f4;
+        }
+        .div-{{color}}{
+            background-color: {{color}};
+        }
+    </style>
+</head>
+
+<body class = "bg-dark text-info text-center">
+    <h1 class="text-center m-2">Playground</h1>
+    <a class = "m-2 btn btn-primary" href="/">Return Home</a>
+    <a class = "m-2 btn btn-warning" href="/{{color}}">Color</a>
+
+    <div class = "d-flex justify-content-center">
+        <div class = "ml-5 mr-5 d-flex justify-content-flex-start flex-wrap wrap align-items-center">
+
+            {% for i in range(num): %}
+                <div class = "box"> </div>
+            {% endfor %}
+        </div>    
+    </div>
+    
+</body>
+</html>
